@@ -1,0 +1,30 @@
+package pokemon.pokemon;
+import java.util.ArrayList;
+
+public class ListaMovimientos {
+private ArrayList<Movimiento> movimientos = new ArrayList<>();
+    
+    public ListaMovimientos(){
+        //Movimiento de tipo tierra
+        movimientos.add(new Movimiento("Arenas Ardientes", 40, Tipo.TIERRA, 25));
+        movimientos.add(new Movimiento("Arremetida", 65, Tipo.TIERRA, 15 ));
+        movimientos.add(new Movimiento("Ataque Arena", 35, Tipo.TIERRA, 15 ));
+        movimientos.add(new Movimiento("Ataque oseo", 120, Tipo.TIERRA, 15 ));
+               
+        //Movimiento de tipo dragon
+        movimientos.add(new Movimiento("Asalto Espadon",75, Tipo.DRAGON, 15));
+        movimientos.add(new Movimiento("CAñon Dinamax",40, Tipo.DRAGON, 30));
+        movimientos.add(new Movimiento("Carga Dragon",120, Tipo.DRAGON, 5));
+        movimientos.add(new Movimiento("Cometa Draco",80, Tipo.DRAGON, 15));
+        }
+    
+    // Metodo que devuelve el movimiento buscando el nombre
+    public Movimiento buscarMovimientoPorNombre(String nombre){
+        for (Movimiento movimiento : movimientos){
+            if (movimiento.getNombre().equals(nombre)){
+                return movimiento;
+            }
+        }
+        return null;
+    }
+} 
